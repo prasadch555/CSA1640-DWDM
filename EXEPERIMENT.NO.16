@@ -1,0 +1,16 @@
+# Load AirPassengers dataset
+data(AirPassengers)
+
+# Convert to numeric
+ap <- as.numeric(AirPassengers)
+
+# Create breaks from 100 to 700 with width 150
+breaks <- seq(100, 700, by = 150)
+
+# Plot histogram
+hist(ap,
+     breaks = breaks,
+     col = "lightblue",
+     main = "AirPassengers Histogram",
+     xlab = "Number of Passengers",
+     xlim = c(100,700))
