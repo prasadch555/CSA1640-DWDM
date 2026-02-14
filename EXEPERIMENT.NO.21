@@ -1,0 +1,13 @@
+# Load diabetes dataset
+data <- read.csv("diabetes.csv")
+
+# Scatter plot: BloodPressure vs Age
+plot(data$Age, data$BloodPressure,
+     main="Blood Pressure vs Age",
+     xlab="Age", ylab="Blood Pressure")
+
+# Bar chart (average BP by Age)
+avgBP <- tapply(data$BloodPressure, data$Age, mean)
+barplot(avgBP,
+        main="Average Blood Pressure by Age",
+        xlab="Age", ylab="Average Blood Pressure")
