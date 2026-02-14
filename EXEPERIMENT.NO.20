@@ -1,0 +1,8 @@
+# Points scored by tennis players
+scores <- c(45, 50, 55, 60, 62, 65, 70, 72, 75, 150)
+
+# Create boxplot
+boxplot(scores,
+        main = "Tennis Player Scores",
+        ylab = "Points",
+        col = "lightblue")
