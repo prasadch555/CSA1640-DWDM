@@ -1,0 +1,21 @@
+# Given min, max and value
+minF <- 50000
+maxF <- 100000
+v <- 80000
+
+# Min-Max normalization for v
+v_norm <- (v - minF) / (maxF - minF)
+
+# Given data
+data <- c(200,300,400,600,1000)
+
+# Min-Max normalization (0 to 1)
+minmax <- (data - min(data)) / (max(data) - min(data))
+
+# Z-score normalization
+zscore <- (data - mean(data)) / sd(data)
+
+# Display results
+v_norm
+minmax
+zscore
