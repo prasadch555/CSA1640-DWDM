@@ -1,0 +1,26 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+data = {
+    "hardness":[60,90,50,70,80,40,100,30,110,55],
+    "mortality":[1400,1100,1500,1300,1200,1600,1000,1700,900,1450]
+}
+
+df = pd.DataFrame(data)
+
+X = df[["hardness"]]
+y = df["mortality"]
+
+plt.scatter(X, y)
+plt.xlabel("Hardness")
+plt.ylabel("Mortality")
+plt.title("Hardness vs Mortality")
+plt.show()
+
+model = LinearRegression()
+model.fit(X, y)
+
+pred = model.predict([[88]])
+
+print("Predicted Mortality for hardness = 88:", pred[0])
