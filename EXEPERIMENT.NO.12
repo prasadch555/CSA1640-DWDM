@@ -1,0 +1,23 @@
+# Data
+A <- c(18, 2, 20)
+B <- c(22, 28, 10)
+C <- c(20, 40, 40)
+
+# Combine into a data frame
+data <- data.frame(A, B, C)
+
+# 1. Covariance between B and C
+cov_BC <- cov(B, C)
+cov_BC
+
+# 2. Covariance Matrix
+cov_matrix <- cov(data)
+cov_matrix
+
+# 3. Correlation between B and C
+cor_BC <- cor(B, C)
+cor_BC
+
+# 4. Correlation Matrix
+cor_matrix <- cor(data)
+cor_matrix
