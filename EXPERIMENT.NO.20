@@ -1,0 +1,8 @@
+import matplotlib.pyplot as plt
+
+points = [10,12,15,18,20,22,25,30,35,40,100]   # 100 is an outlier
+
+plt.boxplot(points)
+plt.title("Boxplot of Tennis Players' Scores")
+plt.ylabel("Points")
+plt.show()
