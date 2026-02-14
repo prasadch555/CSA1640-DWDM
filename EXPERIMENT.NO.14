@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+classA = np.array([76,35,47,64,95,66,89,36,84,76,35,47,64,95,66,89,36,84])
+classB = np.array([51,56,84,60,59,70,63,66,50,51,56,84,60,59,70,63,66,50])
+
+print("Class A Mean:", np.mean(classA))
+print("Class B Mean:", np.mean(classB))
+
+print("Class A Median:", np.median(classA))
+print("Class B Median:", np.median(classB))
+
+print("Class A Range:", np.max(classA)-np.min(classA))
+print("Class B Range:", np.max(classB)-np.min(classB))
+
+plt.boxplot([classA, classB], labels=["Class A","Class B"])
+plt.title("Class A vs Class B")
+plt.show()
