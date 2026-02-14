@@ -1,0 +1,16 @@
+# Load water dataset
+data(water, package="datasets")
+
+# Scatter plot
+plot(water$hardness, water$mortality,
+     main="Mortality vs Hardness",
+     xlab="Hardness", ylab="Mortality")
+
+# Linear regression model
+model <- lm(mortality ~ hardness, data=water)
+
+# Draw regression line
+abline(model, col="red")
+
+# Predict mortality for hardness = 88
+predict(model, data.frame(hardness=88))
