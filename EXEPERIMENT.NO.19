@@ -1,0 +1,8 @@
+# Load mtcars dataset
+data(mtcars)
+
+# Boxplot of mpg vs cylinders
+boxplot(mpg ~ cyl, data = mtcars,
+        main = "MPG vs Number of Cylinders",
+        xlab = "Cylinders",
+        ylab = "Miles per Gallon")
